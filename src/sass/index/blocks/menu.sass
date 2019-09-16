@@ -1,0 +1,56 @@
+.section-menu
+    border-bottom: 1px solid $bottom-line
+
+.menu__container
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+// ----------------------------------------
+
+// logo style in common.sass
+
+// ----------------------------------------
+
+.main-nav
+    padding-top: 21px
+    padding-bottom: 20px
+
+.main-nav__list
+    display: flex
+
+.main-nav__item
+
+    &:not(:first-child)
+        margin-left: 40px
+
+.main-nav__link
+    color: $main-menu
+    font-size: 14px
+
+    &:hover
+        color: $title
+
+    &:active
+        color: $title
+        
+    &_active
+        color: $title
+
+// ----------------------------------------
+
+.social
+    display: flex
+    align-items: flex-start
+    margin-right: 29px
+
+.social__item
+    display: inline-block
+    overflow: auto
+
+    &:not(:first-child)
+        margin-left: 14px
+
+.social__link
+    font-size: 1px
+    vertical-align: middle

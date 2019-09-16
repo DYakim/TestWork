@@ -1,0 +1,118 @@
+.team__container
+    box-sizing: content-box
+    padding: 0
+    padding-top: 60px
+    padding-bottom: 58px
+
+.slider
+    width: 1200px
+    padding-left: 130px
+    padding-right: 130px
+    padding-top: 50px
+    padding-bottom: 44px
+    margin-top: 60px
+    background-color: $bg-dark
+    position: relative
+    
+    &::before
+        content: ""
+        position: absolute
+        top: -23px
+        left: 50%
+        width: 45px
+        height: 45px
+        background-color: $bg-dark
+        transform: translate(-50%) rotate(45deg)
+
+.slider__wrapper
+    display: flex
+    justify-content: space-between
+    box-sizing: content-box
+    position: relative
+
+.slider__item
+    width: 300px
+
+.slider__control
+
+    &::before
+        content: ""
+        position: absolute
+        top: 46%
+        transform: translate(-50%)
+        width: 17px
+        height: 25px
+        background-repeat: no-repeat
+        background-position: center center
+
+    &_left
+
+        &::before  
+            left: 77px 
+            background-image: url('../img/icons/ArrowSlider.svg')
+
+    &_right
+    
+        &::before  
+            right: 77px
+            background-image: url('../img/icons/ArrowSlider.svg')
+            transform: rotate(180deg)
+
+// ----------------------------------------
+
+.card
+    background-color: $main-bg
+    height: 300px
+
+.card__img
+    display: block
+    height: 225px
+
+.card__footer
+    width: 100%
+    height: 73px
+    padding-top: 13px
+    padding-bottom: 10px
+    padding-left: 20px
+    padding-right: 20px
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+    background-color: $bg-light
+
+.card__name
+    color: $title
+    font-size: 18px
+    padding-left: 1px
+
+.card__post
+    color: $position-carousel
+    font-size: 14px
+
+.card__list
+    display: flex
+    padding-top: 4px
+    padding-right: 4px
+
+.card__item
+    margin-left: 18px
+
+
+// ----------------------------------------
+
+.slider__indicators
+    display: flex
+    justify-content: center
+    margin-top: 22px
+
+.indicators__item
+    width: 10px
+    height: 10px
+    border-radius: 50%
+    background-color: $inactive-carousel
+
+    &:not(:first-child)
+        margin-left: 10px
+
+    &_active
+        background-color: $main-bg

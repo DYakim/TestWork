@@ -1,0 +1,120 @@
+.page-header 
+    height: 590px
+    background-color: $main-bg
+
+.page-header__container
+    position: relative
+    display: flex
+
+// ----------------------------------------
+
+.info 
+    display: flex
+    justify-content: flex-start
+    flex-flow: column
+
+.info__title
+    margin-top: 65px
+    display: inline
+    display: flex
+    align-items: flex-end
+    text-align-last: left
+
+.title__text
+    margin-right: 10px
+    margin-left: -7px
+    color: $bg-light
+    font-size: 100px
+    font-weight: 900
+    line-height: 86px
+    text-shadow: 3px 4px 0 rgba(10, 12, 12, 0.1)
+
+.info__name
+    margin-left: -5px
+    text-shadow: 3px 4px 0 rgba(10, 12, 12, 0.1)
+    color: $bg-light
+    font-size: 54px
+    line-height: 68px
+    text-transform: uppercase
+
+.info__creator
+    margin-left: -4px
+    text-shadow: 2px 4px 0 rgba(10, 12, 12, 0.1)
+    color: $bg-light
+    font-size: 34px
+    line-height: 34px
+
+.info__link
+    text-shadow: 2px 3px 0 rgba(10, 12, 12, 0.1)
+    color: $bg-light
+    margin-top: 49px
+    font-size: 18px
+    font-style: italic
+    position: relative
+
+    &::before
+        content: ""
+        width: 244px
+        height: 1px
+        background-color: $bg-light
+        position: absolute
+        top: -20px
+        left: 0
+
+// ----------------------------------------
+
+.note 
+    width: 340px
+    height: 85px
+    padding-top: 20px
+    padding-right: 130px
+    text-align: right
+    position: absolute
+    top: 81px
+    right: 0
+    background-color: $Rechthoek
+
+    &::before
+        content: ""
+        width: 0
+        height: 0
+        top: 0
+        right: 340px
+        position: absolute
+        border-bottom: 85px solid $Rechthoek
+        border-left: 50px solid transparent
+        border-right: 0px solid transparent
+
+.note__text
+    width: 210px
+    color: $bg-light
+    display: inline
+    font-size: 18px
+    line-height: 22px
+    font-weight: 700
+
+// ----------------------------------------
+
+.arrows
+    width: 32px
+    height: 66px
+    position: absolute
+    left: 50%
+    transform: translateX(-50%)
+    bottom: 43px
+
+.arrows__item
+    width: 100%
+    height: 22px
+
+    &:nth-child(1)
+        background-image: url('../img/icons/Arrow.svg')
+        opacity: 0.3
+
+    &:nth-child(2)
+        background-image: url('../img/icons/Arrow.svg')
+        opacity: 0.6
+        
+    &:nth-child(3)
+        background-image: url('../img/icons/Arrow.svg')
+        

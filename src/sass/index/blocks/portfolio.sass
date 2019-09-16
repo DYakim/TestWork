@@ -1,0 +1,78 @@
+.portfolio__container
+    box-sizing: content-box
+    padding: 0
+    
+// ----------------------------------------
+
+.filter
+    display: flex
+    justify-content: center
+    margin-top: 41px
+
+.filter__item
+    color: $filter
+    font-size: 16px
+    cursor: pointer
+
+    &_active
+        color: $title
+
+    &:hover
+        color: $title
+
+    &:not(:first-child)
+        margin-left: 43px
+    
+
+// ----------------------------------------
+
+.portfolio__list
+    margin-top: 50px
+    display: flex
+    flex-flow: wrap
+    width: 1200px
+    height: 502px
+
+.portfolio__item
+    width: 300px
+    height: 251px
+
+.portfolio__link
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-flow: column
+
+// ----------------------------------------
+
+.portfolio__item
+    &:nth-child(1)
+        background-color: $light-bg
+    &:nth-child(2)
+        background-color: $main-bg
+    &:nth-child(3)
+        background-color: $light-bg
+    &:nth-child(4)
+        background-color: $main-bg
+    &:nth-child(6)
+        background-color: $light-bg
+    &:nth-child(5)
+        background-color: $main-bg
+    &:nth-child(8)
+        background-color: $light-bg
+    &:nth-child(7)
+        background-color: $main-bg
+
+.portfolio__img
+    margin-top: 67px
+    margin-bottom: 23px
+
+.portfolio__text
+    color: $bg-light
+    font-size: 18px
+    font-weight: 700
+    margin-bottom: 3px
+
+.portfolio__span
+    color: $bg-light
+    font-size: 16px

@@ -1,0 +1,154 @@
+.about__container
+    box-sizing: content-box
+
+.about
+    width: 100%
+    text-align: center
+    display: flex
+    flex-flow: column
+    align-items: center
+
+// ----------------------------------------
+
+.header_big
+    margin-top: 67px
+
+.header__wrapper
+    display: flex
+    align-items: flex-end
+    justify-content: center
+
+.header__headline_big
+    font-size: 45px
+    line-height: 36px
+    margin-right: 8px
+
+.header__slogan_big
+    font-size: 30px
+    margin-top: 12px
+    padding-bottom: 17px
+
+.header__point
+    color: $main-bg
+    line-height: 36px
+    font-size: 45px
+    font-weight: 900
+
+.about__text
+    margin-top: 40px
+    margin-bottom: 66px
+    font-size: 17px
+    line-height: 22px
+
+// ----------------------------------------
+
+.advantages
+    width: 940px
+    display: flex
+    justify-content: space-between
+
+.advantages__item
+    width: 210px
+    position: relative
+    &::before
+        content: ""
+        position: absolute
+        width: 210px
+        height: 60px
+        top: 0
+        left: 0
+        background-repeat: no-repeat
+        background-position: center center
+    &:nth-child(1)
+        &::before
+            background-image: url('../img/colors.png')
+    &:nth-child(2)
+        &::before
+            background-image: url('../img/coffee.png')
+    &:nth-child(3)
+        &::before
+            background-image: url('../img/magic.png')
+
+// ----------------------------------------
+
+.achievements
+    width: 1200px
+    background-color: $bg-dark
+    padding-left: 130px
+    padding-right: 130px
+    padding-top: 50px
+    padding-bottom: 60px
+    margin-top: 70px
+
+.achievements__list
+    display: flex
+    justify-content: space-between
+
+.achievements__item
+    display: flex
+    position: relative
+
+    &:nth-child(1) .achievements__wrapper::before
+        background-image: url('../img/coffee.png')
+    &:nth-child(2) .achievements__wrapper::before
+        background-image: url('../img/happy.png')
+    &:nth-child(3) .achievements__wrapper::before
+        background-image: url('../img/BBQ.png')
+    &:nth-child(4) .achievements__wrapper::before
+        background-image: url('../img/cocktail.png')
+        
+
+.achievements__wrapper
+    text-align-last: left
+    padding-left: 75px
+
+    &::before
+        content: ""
+        width: 60px
+        height: 60px
+        position: absolute
+        bottom: 0
+        left: 0
+        margin-bottom: 5px
+        background-repeat: no-repeat
+        background-position: bottom center
+
+.achievements__number
+    color: $main-bg
+    font-size: 50px
+    font-weight: 900
+
+.achievements__text
+    color: $numbers-text
+    font-size: 18px
+    margin-top: -10px
+
+// ----------------------------------------
+
+.clients
+    width: 1200px
+    padding-left: 130px
+    padding-right: 130px
+    padding-top: 79px
+    padding-bottom: 74px
+    background-color: $main-bg
+
+.header__headline_white
+    color: $bg-light
+    font-size: 27px
+
+.header__slogan_white
+    color: $bg-light
+    font-size: 23px
+    font-weight: 400
+    margin-top: 0
+    padding-bottom: 16px
+
+.header__heart
+    font-size: 30px
+
+.clients_list
+    margin-top: 48px
+    display: flex
+    align-items: center
+    justify-content: space-between
