@@ -10,7 +10,7 @@ const inputMain         = './src/sass/main.sass';
 const output            = siteOutput + '/css/';
 const inputTemplates    = './src/pages/*.html';
 const sassOptions       = { outputStyle: 'compressed' };
-const scriptFiles       = './src/js/script.js'
+const scriptFiles       = './src/js/*.js'
 
 //
 // sass

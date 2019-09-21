@@ -1,22 +1,51 @@
-.footer
+.page-footer
     background-color: $footer
 
 .footer__container
     display: flex
     justify-content: space-between
     align-items: center
-    padding: 23px 130px
+    padding: 23px 0
+    flex-grow: 1
 
 .copyright
     color: $copyright
     font-size: 15px
     line-height: 22.11px
+    flex-grow: 1
+    flex-basis: 0
 
 .arrow_up
-    margin-left: -130px
+    text-align: center
+    flex-grow: 1
+    flex-basis: 0
 
 .footer__social
     margin-right: 0
+    justify-content: flex-end
+    flex-grow: 1
+    flex-basis: 0
 
 
+// ----------------------------------------
 
+
+@media screen and ( max-width: $desktop-width )
+
+    .footer__container
+        padding-left: 10px
+        padding-right: 10px
+    
+@media screen and ( max-width: $tablet-width )
+
+    .footer__container
+        padding-top: 10px
+        padding-bottom: 0
+        flex-flow: column-reverse
+        justify-content: space-between
+        height: 150px
+
+    // ----------------------------------------
+
+    .copyright
+        font-size: 13px

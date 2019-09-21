@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0">
     <title>Roran</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
 
@@ -16,12 +17,12 @@
 
 <!-- header  -->
 
-<header class="page-header">
+<header class="page-header" id="home">
     <div class="container page-header__container">   
         <div class="info">
             <div class="info__title title">
                 <h1 class="title__text">Roran</h1>
-                <img class="title__point" src="img/icons/Circle.svg" width="19px" height="21px" alt=".">
+                <img class="title__point" src="img/icons/Circle.svg" width="19" height="21" alt=".">
             </div>
             <span class="info__name">PSD TEMPLATE</span>
             <span class="info__creator">By LunarTemplates</span>
@@ -30,11 +31,13 @@
         <div class="note">
             <p class="note__text">Free to download<br> at lunartemplates.com</p>
         </div>
-        <ul class="arrows">
-            <li class="arrows__item"></li>
-            <li class="arrows__item"></li>
-            <li class="arrows__item"></li>
-        </ul>
+        <a class="arrows" href="#main-menu">
+            <ul class="arrows__list">
+                <li class="arrows__item"></li>
+                <li class="arrows__item"></li>
+                <li class="arrows__item"></li>
+            </ul>
+        </a>
     </div> 
 </header>
 
@@ -44,7 +47,7 @@
 
     <!-- menu  -->
 
-    <section class="section-menu menu">
+    <section class="section-menu menu" id="main-menu">
         <div class="container menu__container">
             <div class="menu__logo logo">
                 <a class="logo__link" href="#">
@@ -53,14 +56,15 @@
                 </a>
             </div>
             <nav class="main-nav">
-                <ul class="main-nav__list">
-                    <li class="main-nav__item"><a class="main-nav__link_active" href="#">Home</a></li>
-                    <li class="main-nav__item"><a class="main-nav__link" href="#">About</a></li>
-                    <li class="main-nav__item"><a class="main-nav__link" href="#">Services </a></li>
-                    <li class="main-nav__item"><a class="main-nav__link" href="#">Team</a></li>
-                    <li class="main-nav__item"><a class="main-nav__link" href="#">Portfolio</a></li>
-                    <li class="main-nav__item"><a class="main-nav__link" href="#">Contact</a></li>
+                <ul class="main-nav__list" id="menu">
+                    <li class="main-nav__item"><a class="main-nav__link" href="#home">Home</a></li>
+                    <li class="main-nav__item"><a class="main-nav__link" href="#about">About</a></li>
+                    <li class="main-nav__item"><a class="main-nav__link" href="#services">Services </a></li>
+                    <li class="main-nav__item"><a class="main-nav__link" href="#team">Team</a></li>
+                    <li class="main-nav__item"><a class="main-nav__link" href="#portfolio">Portfolio</a></li>
+                    <li class="main-nav__item"><a class="main-nav__link" href="#contacts">Contact</a></li>
                 </ul>
+                <button class="menu-button">Меню</button>
             </nav>
             <ul class="social">
                 <li class="social__item"><a class="social__link" href="#"><img class="social__icon" src="img/icons/LinkedIn_menu.png" alt="Li"></a></li>
@@ -74,80 +78,91 @@
 
     <!-- about  -->
 
-    <section class="section-about about">
-        <div class="container about__container">
+    <section class="section-about" id="about">
+        <div class="container about-container">
             <div class="about">
                 <header class="header header_big">
                     <div class="header__wrapper">
-                        <h2 class="header__headline header__headline_big">About Roran</h2>
-                        <span class="header__point">.</span>
+                        <h2 class="header__headline header__headline_big">About Roran<span class="header__point">.</span></h2>
+                        
                     </div>
                     <h3 class="header__slogan header__slogan_big">Creative Studio</h3>
                 </header>
-                <p class="about__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br> vulputate, vehicula nisi vitae, lobortis ante. Praesent sodales iaculis ultricies</p>
-                <ul class="advantages">
+                <p class="about__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. vulputate, vehicula nisi vitae, lobortis ante. Praesent sodales iaculis ultricies</p>
+                <ul class="advantages advantages__list">
                     <li class="advantages__item">
+                        <img class="advantages__img" src="img/colors.png" alt="">
                         <h4 class="advantages__headline">Some fancy <span class="headline_colored">colors</span></h4>
                         <p class="advantages__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer at purus vulputate, vehicula nisi vitae, lobortis ante.</p>
                     </li>
                     <li class="advantages__item">
+                        <img class="advantages__img" src="img/coffee.png" alt="">
                         <h4 class="advantages__headline">Enough <span class="headline_colored">coffee breaks</span></h4>
                         <p class="advantages__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer at purus vulputate, vehicula nisi vitae, lobortis ante.</p>
                     </li>
                     <li class="advantages__item">
+                        <img class="advantages__img" src="img/magic.png" alt="">
                         <h4 class="advantages__headline">A little bit of <span class="headline_colored">magic</span></h4>
                         <p class="advantages__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer at purus vulputate, vehicula nisi vitae, lobortis ante.</p>
                     </li>
                 </ul>
-            </div> 
-            <div class="achievements">
+            </div>
+        </div> 
+        <div class="achievements">
+            <div class="container">
                 <ul class="achievements__list">
                     <li class="achievements__item">
+                        <img class="achievements__img" src="img/coffee.png" width="44" height="60" alt="">
                         <div class="achievements__wrapper">
                             <span class="achievements__number">1085</span>
                             <p class="achievements__text">Empty cups</p>
                         </div>
                     </li>
                     <li class="achievements__item">
+                        <img class="achievements__img" src="img/happy.png" width="60" height="60" alt="">
                         <div class="achievements__wrapper">
                             <span class="achievements__number">102</span>
                             <p class="achievements__text">Happy clients</p>
                         </div>
                     </li>
                     <li class="achievements__item">
+                        <img class="achievements__img" src="img/BBQ.png" width="46" height="60" alt="">
                         <div class="achievements__wrapper">
                             <span class="achievements__number">25</span>
                             <p class="achievements__text">BBQ meetings</p>
                         </div>
                     </li>
                     <li class="achievements__item">
+                        <img class="achievements__img" src="img/cocktail.png" width="60" height="56" alt="">
                         <div class="achievements__wrapper">
                             <span class="achievements__number">29</span>
                             <p class="achievements__text">Cocktail parties</p>
                         </div>
                     </li>
                 </ul>
-            </div> 
-            <div class="clients">
+            </div>
+        </div> 
+        <div class="clients">
+            <div class="container">
                 <header class="header">
                     <h3 class="header__headline header__headline_white">Some of our clients</h3>
                     <p class="header__slogan header__slogan_white">We <span class="header__heart">&#9825;</span> every single one</p>
                 </header>
-                <ul class="clients_list">
+                <ul class="clients__list">
                     <li class="clients__item"><img class="clients__logo" src="img/Mashable.png" alt="Mashable"></li>
                     <li class="clients__item"><img class="clients__logo" src="img/jQuery.png" alt="jQuery"></li>
                     <li class="clients__item"><img class="clients__logo" src="img/LunarTemplates.png" alt="LunarTemplates"></li>
                     <li class="clients__item"><img class="clients__logo" src="img/VHDesign.png" alt="VHDesign"></li>
                 </ul>
             </div>
-        </div>  
+        </div> 
     </section>
 
     <!-- end about  -->
 
     <!-- services  -->
 
-    <section class="section-services services">
+    <section class="section-services services" id="services">
         <div class="container services__container">
             <header class="header">
                 <h2 class="header__headline">Our Services</h2>
@@ -155,36 +170,42 @@
             </header>
             <ul class="services__list">
                 <li class="services__item">
+                    <img class="services__img" src="img/laptop.png" width="60" height="56" alt="">
                     <div class="services__wrapper">
                         <h4 class="services__headline">Dictum tincidunt <span class="headline_colored">diam</span></h4>
                         <p class="services__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer at purus vulputate, vehicula nisi vitae, lobortis ante.</p>
                     </div>
                 </li>
                 <li class="services__item">
+                    <img class="services__img" src="img/paints.png" width="47" height="60" alt="">
                     <div class="services__wrapper">
                         <h4 class="services__headline">Dictum tincidunt <span class="headline_colored">diam</span></h4>
                         <p class="services__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer at purus vulputate, vehicula nisi vitae, lobortis ante.</p>
                     </div>
                 </li>
                 <li class="services__item">
+                    <img class="services__img" src="img/tablet.png" width="46" height="60" alt="">
                     <div class="services__wrapper">
                         <h4 class="services__headline">Dictum tincidunt <span class="headline_colored">diam</span></h4>
                         <p class="services__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer at purus vulputate, vehicula nisi vitae, lobortis ante.</p>
                     </div>
                 </li>
                 <li class="services__item">
+                    <img class="services__img" src="img/computer.png" width="60" height="54" alt="">
                     <div class="services__wrapper">
                         <h4 class="services__headline">Dictum tincidunt <span class="services__headline_colored">diam</span></h4>
                         <p class="services__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer at purus vulputate, vehicula nisi vitae, lobortis ante.</p>
                     </div>
                 </li>
                 <li class="services__item">
+                    <img class="services__img" src="img/twoСomputers.png" width="60" height="60" alt="">
                     <div class="services__wrapper">
                         <h4 class="services__headline">Dictum tincidunt <span class="services__headline_colored">diam</span></h4>
                         <p class="services__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer at purus vulputate, vehicula nisi vitae, lobortis ante.</p>
                     </div>
                 </li>
                 <li class="services__item">
+                    <img class="services__img" src="img/window.png" width="60" height="46" alt="">
                     <div class="services__wrapper">
                         <h4 class="services__headline">Dictum tincidunt <span class="services__headline_colored">diam</span></h4>
                         <p class="services__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer at purus vulputate, vehicula nisi vitae, lobortis ante.</p>
@@ -198,9 +219,9 @@
 
     <!-- quote  -->
 
-    <div class="section-quote quote">
+    <div class="section-quote quote" id="quote">
         <div class="container quote__container">
-            <p class="quote__text">Lorem ipsum dolor sit amet, <b>consectetur adipiscing</b> elit. Integer at purus <b>vulputate</b>, vehicula nisi vitae, lobortis ante. Praesent sodales iaculis ultricies. Vestibulum et <b>tristique</b> nisl, sed volutpat ante.</p>
+            <p class="quote__text"><span class="quote__quotes"></span>Lorem ipsum dolor sit amet, <b>consectetur adipiscing</b> elit. Integer at purus <b>vulputate</b>, vehicula nisi vitae, lobortis ante. Praesent sodales iaculis ultricies. Vestibulum et <b>tristique</b> nisl, sed volutpat ante.<span class="quote__quotes"></span></p>
             <p class="quote__author">Jonathan Doe</p>
         </div>
     </div>
@@ -209,17 +230,19 @@
 
     <!-- team  -->
 
-    <section  class="section-team team">
-        <div class="container team__container">
+    <section  class="section-team team" id="team">
+        <div class="container">
             <header class="header">
                 <h2 class="header__headline">Meet...the team</h2>
                 <p class="header__slogan">They are really nice!</p>
             </header>
-            <div class="slider">
+        </div>
+        <div class="slider">
+            <div class="container slider__container">
                 <div class="slider__wrapper">
                     <div class="slider__item">
                         <div class="slider__card card">
-                            <img class="card__img" src="" alt="">
+                            <img class="card__img" src="https://picsum.photos/id/325/300/225" alt="">
                             <div class="card__footer">
                                 <div class="card__text">
                                     <p class="card__name">Jonathan Doe</p>
@@ -234,7 +257,7 @@
                     </div>
                     <div class="slider__item">
                         <div class="slider__card card">
-                            <img class="card__img" src="" alt="">
+                            <img class="card__img" src="https://picsum.photos/id/355/300/225" alt="">
                             <div class="card__footer">
                                 <div class="card__text">
                                     <p class="card__name">Jaden Doe</p>
@@ -249,7 +272,7 @@
                     </div>
                     <div class="slider__item">
                         <div class="slider__card card">
-                            <img class="card__img" src="" alt="">
+                            <img class="card__img" src="https://picsum.photos/id/475/300/225" alt="">
                             <div class="card__footer">
                                 <div class="card__text">
                                     <p class="card__name">Mister Doe</p>
@@ -262,9 +285,9 @@
                             </div>
                         </div>
                     </div>
-                    <!-- <div class="slider__item">
+                    <div class="slider__item">
                         <div class="slider__card card">
-                            <img class="card__img" src="" alt="">
+                            <img class="card__img" src="https://picsum.photos/id/474/300/225" alt="">
                             <div class="card__footer">
                                 <div class="card__text">
                                     <p class="card__name">Jonathan Doe</p>
@@ -279,7 +302,7 @@
                     </div>
                     <div class="slider__item">
                         <div class="slider__card card">
-                            <img class="card__img" src="" alt="">
+                            <img class="card__img" src="https://picsum.photos/id/235/300/225" alt="">
                             <div class="card__footer">
                                 <div class="card__text">
                                     <p class="card__name">Jaden Doe</p>
@@ -292,31 +315,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="slider__item">
-                        <div class="slider__card card">
-                            <img class="card__img" src="" alt="">
-                            <div class="card__footer">
-                                <div class="card__text">
-                                    <p class="card__name">Mister Doe</p>
-                                    <p class="card__post">Designer</p>
-                                </div>
-                                <ul class="card__list">
-                                    <li class="card__item"><a class="card__link" href=""><img src="img/icons/Twitter_menu.png" alt="Tw"></a></li>
-                                    <li class="card__item"><a class="card__link" href=""><img src="img/icons/Facebook_menu.png" alt="Fb"></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div> -->
                 </div>
-                <a class="slider__control slider__control_left" href="#" role="button"></a>
-                <a class="slider__control slider__control_right" href="#" role="button"></a>
-                <ul class="slider__indicators indicators">
-                    <li class="indicators__item"></li>
-                    <li class="indicators__item indicators__item_active"></li>
-                    <li class="indicators__item"></li>
-                    <li class="indicators__item"></li>
-                    <li class="indicators__item"></li>
-                </ul>
             </div>
         </div>
     </section>
@@ -325,34 +324,142 @@
 
     <!-- portfolio  -->
 
-    <section class="section-portfolio portfolio">
-        <div class="container portfolio__container">
+    <section class="section-portfolio portfolio" id="portfolio">
+        <div class="container">
             <header class="header">
                 <h2 class="header__headline">Portfolio</h2>
                 <p class="header__slogan">This is what we’ve been working on</p>
             </header>
-            <ul class="portfolio__filter filter">
-                <li class="filter__item" data-class="Web">Web</li>
-                <li class="filter__item" data-class="Digital Art">Digital Art</li>
-                <li class="filter__item" data-class="Illustrations">Illustrations</li>
-                <li class="filter__item" data-class="Branding">Branding</li>
-                <li class="filter__item" data-class="all">All</li>
+            <ul class="portfolio__filter">
+                <li class="filter__item" data-filter=".web">web</li>
+                <li class="filter__item" data-filter=".digital-art">digital art</li>
+                <li class="filter__item" data-filter=".Illustrations">Illustrations</li>
+                <li class="filter__item" data-filter=".branding">branding</li>
+                <li class="filter__item active" data-filter="*">all</li>
             </ul>
+        </div>
+        <div class="portfolio-wrapper">
             <ul class="portfolio__list">
-                <li class="portfolio__item"  data-class="Web"><a class="portfolio__link" href="#"></a></li>
-                <li class="portfolio__item"  data-class="Digital Art"><a class="portfolio__link" href="#"></a></li>
-                <li class="portfolio__item"  data-class="Branding"><a class="portfolio__link" href="#"></a></li>
-                <li class="portfolio__item"  data-class="Illustrations"><a class="portfolio__link" href="#"></a></li>
-                <li class="portfolio__item"  data-class="Web"><a class="portfolio__link" href="#"></a></li>
-                <li class="portfolio__item"  data-class="Branding">
-                    <a class="portfolio__link" href="#">
-                        <img class="portfolio__img" src="img/chain.png">
-                        <p class="portfolio__text">Free Website PSD</p>
-                        <span class="portfolio__span">Web</span>
+                <li class="portfolio__item web">
+                    <a class="portfolio__link" href="https://picsum.photos/id/155/900/786">
+                        <img class="portfolio__img" src="https://picsum.photos/id/155/300/251" alt="">
+                        <div class="portfolio__item_hover">
+                            <img src="img/chain.png" alt="">
+                            <p class="portfolio__text">Free Website PSD</p>
+                            <span class="portfolio__span">Web</span>
+                        </div>
                     </a>
                 </li>
-                <li class="portfolio__item"  data-class="Illustrations"><a class="portfolio__link" href="#"></a></li>
-                <li class="portfolio__item"  data-class="Branding"><a class="portfolio__link" href="#"></a></li>
+                <li class="portfolio__item digital-art">
+                    <a class="portfolio__link" href="https://picsum.photos/id/255/900/786">
+                        <img class="portfolio__img" src="https://picsum.photos/id/255/300/251" alt="">
+                        <div class="portfolio__item_hover">
+                            <img src="img/chain.png" alt="">
+                            <p class="portfolio__text">Free Website PSD</p>
+                            <span class="portfolio__span">Digital Art</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="portfolio__item Illustrations">
+                    <a class="portfolio__link" href="https://picsum.photos/id/355/900/786">
+                        <img class="portfolio__img" src="https://picsum.photos/id/355/300/251" alt="">
+                        <div class="portfolio__item_hover">
+                            <img src="img/chain.png" alt="">
+                            <p class="portfolio__text">Free Website PSD</p>
+                            <span class="portfolio__span">Illustrations</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="portfolio__item branding">
+                    <a class="portfolio__link" href="https://picsum.photos/id/455/900/786">
+                        <img class="portfolio__img" src="https://picsum.photos/id/455/300/251" alt="">
+                        <div class="portfolio__item_hover">
+                            <img src="img/chain.png" alt="">
+                            <p class="portfolio__text">Free Website PSD</p>
+                            <span class="portfolio__span">Branding</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="portfolio__item web">
+                    <a class="portfolio__link" href="https://picsum.photos/id/555/900/786">
+                        <img class="portfolio__img" src="https://picsum.photos/id/555/300/251" alt="">
+                        <div class="portfolio__item_hover">
+                            <img src="img/chain.png" alt="">
+                            <p class="portfolio__text">Free Website PSD</p>
+                            <span class="portfolio__span">Web</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="portfolio__item branding">
+                    <a class="portfolio__link" href="https://picsum.photos/id/655/900/786">
+                        <img class="portfolio__img" src="https://picsum.photos/id/655/300/251" alt="">
+                        <div class="portfolio__item_hover">
+                            <img src="img/chain.png" alt="">
+                            <p class="portfolio__text">Free Website PSD</p>
+                            <span class="portfolio__span">Branding</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="portfolio__item digital-art">
+                    <a class="portfolio__link" href="https://picsum.photos/id/755/900/786">
+                        <img class="portfolio__img" src="https://picsum.photos/id/755/300/251" alt="">
+                        <div class="portfolio__item_hover">
+                            <img src="img/chain.png" alt="">
+                            <p class="portfolio__text">Free Website PSD</p>
+                            <span class="portfolio__span">Digital Art</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="portfolio__item Illustrations">
+                    <a class="portfolio__link" href="https://picsum.photos/id/855/900/786">
+                        <img class="portfolio__img" src="https://picsum.photos/id/855/300/251" alt="">
+                        <div class="portfolio__item_hover">
+                            <img src="img/chain.png" alt="">
+                            <p class="portfolio__text">Free Website PSD</p>
+                            <span class="portfolio__span">Illustrations</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="portfolio__item Illustrations">
+                    <a class="portfolio__link" href="https://picsum.photos/id/955/900/786">
+                        <img class="portfolio__img" src="https://picsum.photos/id/955/300/251" alt="">
+                        <div class="portfolio__item_hover">
+                            <img src="img/chain.png" alt="">
+                            <p class="portfolio__text">Free Website PSD</p>
+                            <span class="portfolio__span">Illustrations</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="portfolio__item web">
+                    <a class="portfolio__link" href="https://picsum.photos/id/165/900/786">
+                        <img class="portfolio__img" src="https://picsum.photos/id/165/300/251" alt="">
+                        <div class="portfolio__item_hover">
+                            <img src="img/chain.png" alt="">
+                            <p class="portfolio__text">Free Website PSD</p>
+                            <span class="portfolio__span">Web</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="portfolio__item digital-art">
+                    <a class="portfolio__link" href="https://picsum.photos/id/265/900/786">
+                        <img class="portfolio__img" src="https://picsum.photos/id/265/300/251" alt="">
+                        <div class="portfolio__item_hover">
+                            <img src="img/chain.png" alt="">
+                            <p class="portfolio__text">Free Website PSD</p>
+                            <span class="portfolio__span">Digital Art</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="portfolio__item branding">
+                    <a class="portfolio__link" href="https://picsum.photos/id/365/900/786">
+                        <img class="portfolio__img" src="https://picsum.photos/id/365/300/251" alt="">
+                        <div class="portfolio__item_hover">
+                            <img src="img/chain.png" alt="">
+                            <p class="portfolio__text">Free Website PSD</p>
+                            <span class="portfolio__span">Branding</span>
+                        </div>
+                    </a>
+                </li>
             </ul>
         </div>
     </section>
@@ -361,58 +468,63 @@
 
     <!-- contacts  -->
 
-    <section class="section-contacts contacts">
-        <div class="container contacts__container">
-            <header class="header">
-                <h2 class="header__headline">Contact</h2>
-                <p class="header__slogan">We would really love to hear from you!</p>
-            </header>
-            <div class="logo-wrapper">
-                <div class="contacts__logo logo">
-                    <a class="logo__link" href="#">
-                        <h2 class="logo__text">Roran</h2>
-                        <span class="logo__point">.</span>
-                    </a>
-                </div>
+    <section class="section-contacts contacts" id="contacts">
+        <header class="header">
+            <h2 class="header__headline">Contact</h2>
+            <p class="header__slogan">We would really love to hear from you!</p>
+        </header>
+        <div class="logo-wrapper">
+            <div class="contacts__logo logo">
+                <a class="logo__link" href="#">
+                    <h2 class="logo__text">Roran</h2>
+                    <span class="logo__point">.</span>
+                </a>
             </div>
-            <div class="contacts__wrapper">
-                <form class="form" action="">
-                    <div class="form__wrapper">
-                        <label class="form__label">Your name</label>
-                        <input class="form__input" required type="text">
-                    </div>
-                    <div class="form__wrapper">
-                        <label class="form__label">Your email</label>
-                        <input class="form__input" required type="email">
-                    </div>
-                    <div class="form__wrapper">
-                        <label class="form__label">Subject</label>
-                        <input class="form__input" type="text">
-                    </div>
-                    <div class="form__wrapper">
-                        <label class="form__label">Message</label>
-                        <textarea class="form__input form__textarea" required class="" type="text" name="message"></textarea>
-                    </div>
-                    <input class="form__button button" type="submit" value="Send">
-                </form>
-                <div class="contactinfo">
-                    <h4 class="contactinfo__headline">Contactinfo</h4>
-                    <p class="contactinfo__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer at purus vulputate.</p>
-                    <p class="contactinfo__text">Vehicula nisi vitae, lobortis ante. Praesent sodales iaculis ultricies.</p>
-                    <ul class="contactinfo__list">
-                        <li class="contactinfo__item">
-                            <span class="contactinfo__contacts">Rue de Halle 245<br>1000 Brussels</span>
-                        </li>
-                        <li class="contactinfo__item">
+        </div>
+        <div class="contacts__wrapper">
+            <form class="form" action="#">
+                <div class="form__wrapper">
+                    <label class="form__label">Your name</label>
+                    <input class="form__input" required type="text">
+                </div>
+                <div class="form__wrapper">
+                    <label class="form__label">Your email</label>
+                    <input class="form__input" required type="email">
+                </div>
+                <div class="form__wrapper">
+                    <label class="form__label">Subject</label>
+                    <input class="form__input" type="text">
+                </div>
+                <div class="form__wrapper">
+                    <label class="form__label">Message</label>
+                    <textarea class="form__input form__textarea" required name="message"></textarea>
+                </div>
+                <input class="form__button button" type="submit" value="Send">
+            </form>
+            <div class="contactinfo">
+                <h4 class="contactinfo__headline">Contactinfo</h4>
+                <p class="contactinfo__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer at purus vulputate.</p>
+                <p class="contactinfo__text">Vehicula nisi vitae, lobortis ante. Praesent sodales iaculis ultricies.</p>
+                <ul class="contactinfo__list">
+                    <li class="contactinfo__item">
+                        <img class="contactinfo__img" src="img/marker.png" width="42" height="60" alt="">
+                        <div class="comtactinfo__wrapper"><span class="contactinfo__contacts">Rue de Halle 245 1000 Brussels</span></div>
+                    </li>
+                    <li class="contactinfo__item">
+                        <img class="contactinfo__img" src="img/phone.png" width="36" height="60" alt="">
+                        <div class="comtactinfo__wrapper">
                             <span class="contactinfo__contacts">03 123 45 67</span>
                             <span class="contactinfo__contacts">0412 345 678</span>
-                        </li>
-                        <li class="contactinfo__item">
+                        </div>
+                    </li>
+                    <li class="contactinfo__item">
+                        <img class="contactinfo__img" src="img/pen.png" width="40" height="60" alt="">
+                        <div class="comtactinfo__wrapper">
                             <span class="contactinfo__contacts">info@roran.com</span>
                             <span class="contactinfo__contacts">question@roran.com</span>
-                        </li>
-                    </ul>
-                </div>
+                        </div>
+                    </li>
+                </ul>
             </div>
         </div>
     </section>
@@ -426,7 +538,7 @@
 <footer class="page-footer footer">
     <div class="container footer__container">
         <span class="copyright">© 2014 Roran. All rights reserved</span>
-        <a class="arrow_up" href="#" onclick="return up()"><img src="img/icons/ArrowF.svg" alt="Up"></a>
+        <a class="arrow_up" href="#home"><img src="img/icons/ArrowF.svg" alt="Up"></a>
         <ul class="social footer__social">
             <li class="social__item"><a class="social__link" href="#"><img src="img/icons/LinkedIn_footer.png" alt="Li"></a></li>
             <li class="social__item"><a class="social__link" href="#"><img src="img/icons/Pinterest_footer.png" alt="P"></a></li>
@@ -440,7 +552,13 @@
 
 
 
-  <script src="js/script.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.1.0/jquery-migrate.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/ajax-loader.gif"></script>
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="js/main.js"></script>
 
 
 </body>

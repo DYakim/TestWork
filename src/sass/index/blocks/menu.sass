@@ -1,5 +1,7 @@
 .section-menu
     border-bottom: 1px solid $bottom-line
+    width: 100%
+    position: relative
 
 .menu__container
     display: flex
@@ -15,14 +17,27 @@
 .main-nav
     padding-top: 21px
     padding-bottom: 20px
+    padding-left: 15px
+    padding-right: 15px
+    width: 100%
+
+.menu-button
+    display: none
+    width: 80px
+    height: 40px
+    background-color: $main-bg
+    color: $bg-light
+    font-family: "Open Sans"
+    font-size: 14px
+    font-weight: 700
+    line-height: 26px
 
 .main-nav__list
     display: flex
-
-.main-nav__item
-
-    &:not(:first-child)
-        margin-left: 40px
+    flex-flow: row
+    max-width: 480px
+    margin: 0 auto
+    justify-content: space-between
 
 .main-nav__link
     color: $main-menu
@@ -33,24 +48,81 @@
 
     &:active
         color: $title
-        
-    &_active
-        color: $title
 
 // ----------------------------------------
 
 .social
+    width: 100px
+    height: 30px
     display: flex
-    align-items: flex-start
+    align-items: center
     margin-right: 29px
 
 .social__item
-    display: inline-block
+    display: block
     overflow: auto
+    height: 17px
+    overflow: hidden
 
     &:not(:first-child)
         margin-left: 14px
 
 .social__link
     font-size: 1px
-    vertical-align: middle
+    vertical-align: top
+
+
+// ----------------------------------------
+
+
+@media screen and ( max-width: $desktop-width )
+
+    
+    .social
+        margin-right: 0
+
+
+@media screen and ( max-width: $tablet-width )
+
+    .menu__logo
+        order: 1
+
+    // ----------------------------------------
+    
+    .menu-button
+        display: block
+
+    .main-nav
+        padding: 5px 0
+        order: 3
+        width: 80px
+        display: flex
+        justify-content: flex-end
+        box-sizing: content-box
+
+    .main-nav__list
+        display: none
+        position: absolute
+        top: 82px
+        left: 0
+        max-width: 100%
+        width: 100%
+        z-index: 9999
+
+    .main-nav__item
+        background-color: $bg-light
+        border-bottom: 1px solid $bottom-line
+        padding-top: 20px
+        padding-bottom: 20px
+
+    .main-nav__link
+        display: block
+        text-align: center
+        width: 100%
+        height: 100%
+
+    // ----------------------------------------
+
+    .social
+        order: 2
+    

@@ -1,16 +1,20 @@
+.section-contacts
+    padding-top: 67px
+    position: relative
+    overflow: hidden
+    z-index: 100
+    
 .contacts__container
     box-sizing: content-box
     padding-left: 0
-    padding-top: 67px
     display: flex
     flex-flow: column
     align-items: center
-    position: relative
 
 // ----------------------------------------
 
 .logo-wrapper
-    width: 1200px
+    width: 100%
     height: 460px
     margin-top: 45px
     display: flex
@@ -24,10 +28,10 @@
     &::before
         content: ""
         width: 100%
-        height: 600px
+        height: 1000px
         background-color: $bg-dark
         position: absolute
-        bottom: -600px
+        bottom: -1000px
         left: 0
 
 
@@ -56,16 +60,17 @@
 .contacts__wrapper
     position: absolute
     width: 960px
-    height: 660px
+    min-height: 660px
     padding-top: 39px
     padding-right: 50px
     padding-bottom: 50px
     padding-left: 50px
     display: flex
     bottom: 76px
-    left: 120px
+    left: 50%
+    transform: translate(-50%)
     background-color: $bg-light
-    z-index: 999
+    z-index: 99
 
 
 .form__wrapper
@@ -106,12 +111,8 @@
 
 .form__textarea
     height: 200px
-    width: 506px
     resize: none
     padding-top: 15px
-    padding-right: 15px
-    font-family: $main-font
-    font-size: 14px
 
 
 .form__button
@@ -146,37 +147,106 @@
 .contactinfo__list
     display: flex
     flex-flow: column
+    justify-content: center
     margin-top: 50px
 
 
 .contactinfo__item
-    margin-left: 68px
     margin-bottom: 42px
     display: flex
+
+
+.comtactinfo__wrapper
+    display: flex
     flex-flow: column
-    position: relative
-
-    &::before
-        content: ""
-        position: absolute
-        bottom: -7px
-        left: -63px
-        width: 50px
-        height: 70px
-        background-repeat: no-repeat
-        background-position: bottom center
-
-    &:nth-child(1)::before
-        background-image: url("../img/marker.png")
-
-    &:nth-child(2)::before
-        background-image: url("../img/phone.png")
-
-    &:nth-child(3)::before
-        background-image: url("../img/pen.png")
-        
+    margin-left: 30px
 
 .contactinfo__contacts
+    display: inline-block
     color: $title
     font-size: 18px
     line-height: 22px
+
+
+// ----------------------------------------
+
+
+@media screen and ( max-width: $desktop-width )
+
+
+    .logo-wrapper
+        height: 220px
+        margin-bottom: 590px
+
+    .contacts__wrapper
+        bottom: 0
+        width: 100%
+        padding-top: 39px
+        padding-right: 20px
+        padding-bottom: 20px
+        padding-left: 20px
+
+    // ----------------------------------------
+
+    .form__input
+        width: 360px
+
+    
+@media screen and ( max-width: $tablet-width )
+
+    .logo-wrapper
+        margin-bottom: 860px
+        height: 220px
+
+    .contacts__wrapper
+        min-height: 930px
+        bottom: 0
+        padding-top: 39px
+        padding-right: 10px
+        padding-bottom: 20px
+        padding-left: 10px
+        flex-flow: column-reverse
+        justify-content: flex-start
+
+    // ----------------------------------------
+
+    .form__wrapper
+        align-items: center
+
+    .form__label
+        width: 300px
+    
+    .form__input
+        width: 300px
+
+    .form__button
+        display: block
+        margin: 0 auto
+        margin-top: 14px
+
+    // ----------------------------------------
+
+    .contactinfo
+        margin-left: 0
+        align-items: center
+
+    .contactinfo__headline
+        text-align: center
+
+    .contactinfo__text
+        text-align: center
+
+    .contactinfo__list
+        margin-top: 20px
+        align-items: center
+
+    .contactinfo__item
+        align-items: center
+        margin-bottom: 10px
+
+    .contactinfo__img
+        height: 30px
+        width: 20px
+
+    .contactinfo__contacts
+        font-size: 14px
