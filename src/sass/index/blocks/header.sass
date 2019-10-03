@@ -100,6 +100,18 @@
     left: 50%
     transform: translateX(-50%)
     bottom: 43px
+        
+    &:hover .arrows__item:nth-child(1)
+        transform: translateY(15px)
+        transition: 0.2s
+
+    &:hover .arrows__item:nth-child(2)
+        transform: translateY(15px)
+        transition: 0.4s
+        
+    &:hover .arrows__item:nth-child(3)
+        transform: translateY(15px)
+        transition: 0.6s
 
 .arrows__item
     width: 100%
@@ -108,13 +120,16 @@
     &:nth-child(1)
         background-image: url('../img/icons/Arrow.svg')
         opacity: 0.3
+        transition: 0.2s
 
     &:nth-child(2)
         background-image: url('../img/icons/Arrow.svg')
         opacity: 0.6
+        transition: 0.3s
         
     &:nth-child(3)
         background-image: url('../img/icons/Arrow.svg')
+        transition: 0.6s
         
 
 // ----------------------------------------
@@ -135,3 +150,33 @@
             right: 310px
 
 
+
+@media screen and ( max-width: $tablet-width )
+
+    .page-header 
+        padding-top: 75px
+    
+    .title__text
+        margin-right: 10px
+        font-size: 60px
+        line-height: 56px
+        margin-right: 5px
+    
+    .title__point
+        width: 15px
+        height: 17px
+
+    .info__name
+        font-size: 34px
+        line-height: 48px
+
+    .info__creator
+        font-size: 24px
+        line-height: 34px
+
+    .info__link
+        margin-top: 39px
+        font-size: 18px
+
+        &::before
+            width: 224px

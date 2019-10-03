@@ -21,6 +21,14 @@ $(function(){
        });
 
     });
+    $('.main-nav__item').on('click', function() {
+        $('.main-nav__list').slideToggle(100, function(){
+             if( $(this).css('display') === "none"){
+                 $(this).removeAttr('style');
+             }
+        });
+ 
+     });
 
 });
 
@@ -30,9 +38,9 @@ $(function(){
 $(function() {
     $('.portfolio__list').isotope({
         itemSelector: '.portfolio__item',
-        layoutMode: 'masonry',
+        percentPosition: true,
         masonry: {
-            fitWidth: true
+            columnWidth: '.portfolio__item'
         }
     });
     $('.filter__item').click(function(){
@@ -54,7 +62,15 @@ $(function() {
 		type: 'image',
 		closeOnContentClick: true,
 		closeBtnInside: false,
-		fixedContentPos: true
+        fixedContentPos: true,
+        mainClass: 'mfp-no-margins mfp-with-zoom',
+        image: {
+			verticalFit: true
+		},
+        zoom: {
+			enabled: true,
+			duration: 300
+		}
 	});
 });
 
@@ -65,7 +81,7 @@ $(function() {
     $('.slider__wrapper').slick({
         slidesToShow: 3,
         slidesToScroll: 1,
-        autoplay: true,
+        autoplay: false,
         autoplaySpeed: 2000,
         dots: true,
         responsive: [

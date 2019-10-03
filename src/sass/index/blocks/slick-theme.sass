@@ -1,13 +1,15 @@
 /* Arrows */
 
 .slick-prev, .slick-next
-    top: 50%
-    transform: translateY(-50%)
+    top: 45%
     position: absolute
     width: 17px
     height: 25px
     font-size: 0
     outline: none
+    transition: 0.3s
+    &:hover
+        filter: brightness(0.8)
     
 .slick-prev
     content: ""
@@ -35,6 +37,7 @@
     li
         display: inline-block
         margin: 0 5px
+        
         button
             height: 10px
             width: 10px
@@ -43,6 +46,8 @@
             background-color: $inactive-carousel
             border-radius: 50%
             outline: none
+            transition: 0.2s
+
             &:hover, &:focus, &:active
                 background-color: $main-bg
 

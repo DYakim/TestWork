@@ -6,21 +6,24 @@
 
 .portfolio__filter
     display: flex
-    justify-content: space-between
+    justify-content: center
     margin: 0 auto
     margin-top: 41px
-    max-width: 450px
 
 .filter__item
     color: $filter
     font-size: 16px
+    padding-bottom: 3px
     cursor: pointer
+    transition: 0.3s
+    border-bottom: 1px solid transparent
 
-    &_active
-        color: $title
+    &:not(:last-child)
+        margin-right: 40px
 
     &:hover
         color: $title
+        border-bottom: 1px solid $filter
     
 
 // ----------------------------------------
@@ -28,24 +31,36 @@
 .portfolio__list
     margin: 0 auto
     margin-top: 50px
+    display: flex
+    max-width: 2000px
+    justify-content: center
 
 .portfolio-wrapper
-    max-width: 1200px
+    max-width: 100%
     margin: 0 auto
 
 .portfolio__item
-    width: 300px
-    height: 251px
+    width: 25%
+    height: 300px
     position: relative
     cursor: pointer
     background: #000
+    overflow: hidden
+    
 
 .portfolio__link
+    display: flex
+    justify-content: center
+    align-items: center
     cursor: pointer
-
-.portfolio__img
     width: 100%
     height: 100%
+
+.portfolio__img
+    max-width: 100%
+    min-height: 100%
+    object-fit: cover
+    transition: 0.5s
 
 // ----------------------------------------
 
@@ -60,6 +75,7 @@
     justify-content: center
     align-items: center
     opacity: 0
+    transition: 0.5s
     
 .portfolio__link:hover .portfolio__img
     opacity: 0.5
@@ -82,27 +98,73 @@
     font-size: 16px
 
 
-// ----------------------------------------
+.mfp-with-zoom .mfp-container,
+.mfp-with-zoom.mfp-bg 
+	opacity: 0
+	-webkit-backface-visibility: hidden
+	-webkit-transition: all 0.3s ease-out 
+	-moz-transition: all 0.3s ease-out 
+	-o-transition: all 0.3s ease-out 
+	transition: all 0.3s ease-out
 
+
+.mfp-with-zoom.mfp-ready .mfp-container 
+	opacity: 1
+
+.mfp-with-zoom.mfp-ready.mfp-bg 
+	opacity: 0.8
+
+
+.mfp-with-zoom.mfp-removing .mfp-container, 
+.mfp-with-zoom.mfp-removing.mfp-bg 
+	opacity: 0
+
+
+// ----------------------------------------
+@media screen and ( max-width: 1200px )
+
+    .portfolio__item
+        width: 33.3%
+
+@media screen and ( max-width: $desktop-width )
+
+    .portfolio__item
+        width: 50%
+        height: 230px
 
 @media screen and ( max-width: $tablet-width )
 
     .portfolio__filter
-        flex-flow: column
-        align-items: center
         justify-content: center
+        flex-wrap: wrap
         margin-top: 20px
 
     .filter__item
+        display: inline
+        padding: 0 10px
         padding-bottom: 10px
-
-    // ----------------------------------------
 
     .portfolio__list
         margin-top: 20px
 
     .portfolio__item
-        width: 200px
-        height: 167px
+        width: 50%
+        height: 251px
+
+@media screen and ( max-width: 570px )
+
+    .portfolio__item
+        height: 200px
+
+@media screen and ( max-width: 480px )
+
+    .portfolio__item
+        width: 100%
+        height: 230px
 
     
+@media screen and ( max-width: $mobile-width )
+
+    .portfolio__item
+        width: 100%
+        height: 230px

@@ -6,7 +6,6 @@
 
 .about
     width: 100%
-    padding-bottom: 70px
     text-align: center
     display: flex
     flex-flow: column
@@ -49,15 +48,18 @@
 
 .advantages
     display: flex
-    justify-content: space-between
+    flex-wrap: wrap
+    justify-content: center
     width: 100%
 
 .advantages__item
-    width: 210px
+    padding: 0 7px
+    margin-bottom: 70px
+    flex-basis: 33%
     display: flex
     flex-flow: column
     align-items: center
-    justify-content: flex-end
+    justify-content: flex-start
 
 .advantages__img
     padding-bottom: 27px
@@ -72,17 +74,17 @@
     width: 100%
     background-color: $bg-dark
     padding-top: 50px
-    padding-bottom: 60px
 
 .achievements__list
     display: flex
     flex-wrap: wrap
-    justify-content: space-between
+    justify-content: center
 
 .achievements__item
     display: flex
     align-items: flex-end
-    width: 200px
+    flex-basis: 25%
+    margin-bottom: 60px
     
 .achievements__img
     margin-bottom: 4px
@@ -106,8 +108,10 @@
 .clients
     width: 100%
     padding-top: 79px
-    padding-bottom: 74px
     background-color: $main-bg
+
+.clients__header
+    margin-bottom: 48px
 
 .header__headline_white
     color: $bg-light
@@ -124,19 +128,23 @@
     font-size: 30px
 
 .clients__list
-    margin-top: 48px
     display: flex
     align-items: center
-    justify-content: space-between
+    justify-content: center
     flex-wrap: wrap
 
+.clients__item
+    margin-bottom: 74px
+
+    &:not(:last-child)
+        padding-right: 30px
 
 // ----------------------------------------
 
 @media screen and ( max-width: $desktop-width )
 
     .achievements
-        padding: 30px 0
+        padding-top: 30px
 
     .achievements__list
         align-content: space-between
@@ -144,6 +152,7 @@
     .achievements__item
         flex-basis: 50%
         justify-content: center
+        
         &:nth-child(-n+2)
             margin-bottom: 30px
             
@@ -152,17 +161,17 @@
 
     
     .clients
-        padding: 50px 0
+        padding-top: 50px
     
     .clients__list
         align-content: space-between
 
     .clients__item
+        padding: 0 !important
+        margin-bottom: 50px
         display: flex
         flex-basis: 50%
         justify-content: center
-        &:nth-child(-n+2)
-            margin-bottom: 30px
 
 
 @media screen and ( max-width: $tablet-width )
@@ -170,24 +179,32 @@
     .advantages
         flex-flow: column
         align-items: center
+        margin-bottom: 40px
 
     .advantages__item
+        
+        width: 300px
         margin-bottom: 30px
 
-    .achievements__item
-        flex-basis: 100%
 
     // ----------------------------------------
 
+    .achievements__list
+        padding-bottom: 20px
+    
     .achievements__item
+        flex-basis: 100%
         margin-bottom: 20px
+
         &:nth-child(-n+2)
             margin-bottom: 20px
 
     // ----------------------------------------
+
+    .clients__list
+        padding-bottom: 30px
 
     .clients__item
+        padding-right: 0
         flex-basis: 100%
         margin-bottom: 20px
-        &:nth-child(-n+2)
-            margin-bottom: 20px
