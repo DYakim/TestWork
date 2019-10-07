@@ -81,18 +81,19 @@ $(function() {
     $('.slider__wrapper').slick({
         slidesToShow: 3,
         slidesToScroll: 1,
-        autoplay: false,
+        autoplay: true,
         autoplaySpeed: 2000,
         dots: true,
         responsive: [
             {
                 breakpoint: 1050,
                 settings: {
-                    slidesToShow: 2
+                    slidesToShow: 2,
+                    arrows: false
                 }
             },
             {
-                breakpoint: 768,
+                breakpoint: 650,
                 settings: {
                     slidesToShow: 1,
                     arrows: false
