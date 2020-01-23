@@ -1,1 +1,1 @@
-https://dedyakim.github.io/TestWorkSite/
+https://dyakim.github.io/TestWorkSite/
